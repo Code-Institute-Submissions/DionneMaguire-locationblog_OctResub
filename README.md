@@ -82,6 +82,7 @@ I am using an agile software development tool in the development of this website
 - Github
 - Cloudinary
 - Heroku
+- Summernote
 
 
 ### testing
@@ -99,4 +100,7 @@ I followed the 'I think therefore I blog' walkthrough to create a basic django p
 - I set the project to use Cloudinary and PostgreSQL
 - I deployed the empty project to heroku
 
+## super user
+
+I created a superuser so that they can create, read, update and delete posts so that they can manage the blogs content.
 
