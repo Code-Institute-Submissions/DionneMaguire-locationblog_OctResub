@@ -5,6 +5,7 @@ from cloudinary.models import CloudinaryField
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
+    location = models.CharField(max_length=50)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="location_posts")
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
