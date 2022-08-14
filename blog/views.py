@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from django.urls import reverse_lazy
 from .models import Post
 from .forms import CommentForm
@@ -51,6 +52,7 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            messages.success(request, 'Thanks for leaving a comment!')
         else:
             comment_form = CommentForm()
         
@@ -85,6 +87,7 @@ class PostCreate(CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        messages.success(self.request, 'Successfully created a Location Post')
         return super(PostCreate, self).form_valid(form)
 
 
@@ -96,6 +99,7 @@ class PostEdit(UpdateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        messages.success(self.request, 'Successfully edited a Location Post')
         return super(PostEdit, self).form_valid(form)
 
 
