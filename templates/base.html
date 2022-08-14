@@ -40,8 +40,12 @@
                     </li>
                     {% if user.is_authenticated %} 
                     <li class="nav-link">
+                        <a class="nav-link" href="{% url 'post_create' %}">Create Post</a>
+                    </li>
+                    <li class="nav-link">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
+                    <p>{{ request.user }} is currently logged in</p>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
