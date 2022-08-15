@@ -87,7 +87,7 @@ class PostCreate(CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        messages.success(self.request, 'Successfully created a Location Post')
+        messages.success(self.request, 'You have successfully created a Location Post')
         return super(PostCreate, self).form_valid(form)
 
 
@@ -99,7 +99,7 @@ class PostEdit(UpdateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        messages.success(self.request, 'Successfully edited a Location Post')
+        messages.success(self.request, 'You have successfully edited a location post')
         return super(PostEdit, self).form_valid(form)
 
 
@@ -107,3 +107,8 @@ class PostDelete(DeleteView):
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('home')
+    success_message = "You have successfully deleted the post"
+
+    def delete(self, request,*args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(PostDelete, self).delete(request, *args, **kwargs)
