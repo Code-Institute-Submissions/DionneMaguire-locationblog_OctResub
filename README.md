@@ -65,7 +65,7 @@ I have the following user stories:
 
 ##### Navbar
 
-- Links to Home, post list, register and sign in/out pages. The home and post list pages are visible to and can be accessed by any user.  If the user is not signed in, the sign in and register links are visible on the navbar. If the user is signed in then there is a sign out link visible.  Also if the user is signed in there is a message to say user name is currently signed in, to act as an extra visual to the user that they are signed in!
+- Links to Home, post list, register and sign in/out pages. The home and post list pages are visible to and can be accessed by any user.  If the user is not signed in, the sign in and register links are visible on the navbar. If the user is signed in then there is a sign out link visible.  Also if the user is signed in there is a message to say user name is currently signed in, to act as an extra visual to the user that they are signed in! The active link is highlighted so that the user can see easily what page they are on.
 Navbar for not signed in user
 
 Navbar for signed in user
@@ -77,6 +77,8 @@ Navbar for signed in user
 
 ##### Home Page
 ##### Post list
+alt attribute on images for screen readers
+capitalized the title and location so the page looks more uniform as we are relying on user input
 ##### Post detail
 ##### Sign In form
 ##### Register Page
