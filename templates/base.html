@@ -36,7 +36,7 @@
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Posts</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'post_list' %}">Posts</a>
                     </li>
                     {% if user.is_authenticated %} 
                     <li class="nav-link">

@@ -8,11 +8,15 @@ from .models import Post
 from .forms import CommentForm
 
 
+def index(request):
+    """ Returns index.html """
+    return render(request, 'index.html')
+
 
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.order_by('-created_on')
-    template_name = 'index.html'
+    template_name = 'post_list.html'
     paginate_by = 6
    
 
@@ -83,7 +87,7 @@ class PostCreate(CreateView):
     model = Post
     fields = ['title', 'location', 'content', 'featured_image', 'excerpt']
     template_name = 'post_create.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('post_list')
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -95,18 +99,18 @@ class PostEdit(UpdateView):
     model = Post
     fields = ['title', 'location', 'content', 'featured_image', 'excerpt']
     template_name = 'post_edit.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('post_list')
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        messages.success(self.request, 'You have successfully edited a location post')
+        messages.success(self.request, 'You have successfully edited a Location post')
         return super(PostEdit, self).form_valid(form)
 
 
 class PostDelete(DeleteView):
     model = Post
     template_name = 'post_delete.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('post_list')
     success_message = "You have successfully deleted the post"
 
     def delete(self, request,*args, **kwargs):

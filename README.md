@@ -27,7 +27,7 @@ Registered users can create posts, edit and delete their own posts.  They can al
 
 #### Site Owner would like to:
 - restrict access to non-registered users
-- control users posts and comments for inappropriate use of the site. I have decided not to put in approval by superuser for adding posts and adding comments but instead put terms and conditions of use by the user ****
+- control users posts and comments for inappropriate use of the site. I have decided not to put in approval by superuser for adding posts and adding comments but instead have put a warning that the site admin will remove anything that is not in keeping with the sites ethos.
 
 ### Agile Development Tool
 
@@ -52,6 +52,7 @@ I have the following user stories:
 - Edit posts - As a signed in user I can edit my posts so that i can update or correct information.
 - Delete posts - As a signed in user I can delete my posts so that I can remove them from the website.
 - Feedback messages - As a user I get messages back after I perform an action so that I know whether i have completed the action correctly.
+- Landing page - As a site user I can go to the landing page so that I can see the purpose of the website.
 
 
 
@@ -63,7 +64,7 @@ I have the following user stories:
 
 ##### Navbar
 
-- Links to Home, **post list, register and sign in/out pages. The home and post list pages are visible to and can be accessed by any user.  If the user is not signed in, the sign in and register links are visible on the navbar. If the user is signed in then there is a sign out link visible.  Also if the user is signed in there is a message to say user name is currently signed in, to act as an extra visual to the user that they are signed in!
+- Links to Home, post list, register and sign in/out pages. The home and post list pages are visible to and can be accessed by any user.  If the user is not signed in, the sign in and register links are visible on the navbar. If the user is signed in then there is a sign out link visible.  Also if the user is signed in there is a message to say user name is currently signed in, to act as an extra visual to the user that they are signed in!
 Navbar for not signed in user
 
 Navbar for signed in user

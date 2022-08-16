@@ -2,6 +2,49 @@ body {
     background-color: #f9fafc
 }
 
+p {
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+
+}
+
+/* Landing page */
+.hero-image {
+    width: 100%;
+    height: 50vh;
+    background: url('https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2F5ee98b88-7bb6-11e8-8ce4-0bcac63244b2.jpg?crop=2250%2C1500%2C0%2C0');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    position: relative;
+}
+
+.hero-overlay {
+    align-content: center;
+}
+
+.hero-text {
+    margin-top: 20px;
+}
+
+.hero-text h1 {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.hero-text p {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
 .brand {
     font-family: "Open Sans", sans-serif;
     font-size: 1.4rem;
