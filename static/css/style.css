@@ -3,7 +3,7 @@ body {
 }
 
 p {
-
+    font-family: 'Nunito', sans-serif;
 }
 
 h1,
@@ -11,9 +11,31 @@ h2,
 h3,
 h4,
 h5 {
+    font-family: 'Roboto', sans-serif;
+}
+/* Navbar*/
 
+.navbar {
+    background-color: rgb(92 88 88);
+    color: white;
 }
 
+.navbar-brand {
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+a.nav-link.active {
+    background-color:#ccc;
+    color: rgba(0, 0, 0, .7);
+}
+.footer {
+    background-color: rgb(92 88 88);
+    color: white;
+}
 /* Landing page */
 .hero-image {
     width: 100%;

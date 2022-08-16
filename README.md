@@ -53,6 +53,7 @@ I have the following user stories:
 - Delete posts - As a signed in user I can delete my posts so that I can remove them from the website.
 - Feedback messages - As a user I get messages back after I perform an action so that I know whether i have completed the action correctly.
 - Landing page - As a site user I can go to the landing page so that I can see the purpose of the website.
+- highlight active page - as a site user I can see the active page highlighted so that I know what page I am on.
 
 
 
@@ -132,7 +133,7 @@ The design is kept simple to let the location posts take centre stage.  Also to 
 
 ### Typography
 
-the fonts selected are : *** for the text and *** for the headings.  These have been selected as they are clear and simple.
+The fonts I have selected are :  Nunito for the text and Roboto for the headings.  These have been selected as they are clear and simple.
 
 ### Images
 
