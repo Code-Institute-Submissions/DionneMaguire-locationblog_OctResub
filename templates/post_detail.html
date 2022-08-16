@@ -8,13 +8,13 @@
             <div class="col-md-6 masthead-text">
                 <h1 class="post-title">{{ post.title }}</h1>
                 <h5 class="post-title">{{ post.location }}</h5>
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="post-subtitle"><span class="posting-name">{{ post.author }}</span> | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img class="detail-img" src="/static/images/stock.jpg" alt="Image of clifftop overlooking the sea" width="100%">
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%">
+                <img class="detail-img" src=" {{ post.featured_image.url }}" alt="{{ post.title }}" width="100%">
                 {% endif %}
             </div>
         </div>
@@ -78,7 +78,7 @@
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        {{ comment.name }}
+                        <span class="posting-name">{{ comment.name }}</span>
                         <span class=" text-muted font-weight-normal">
                             {{ comment.created_on }}
                         </span> wrote:
@@ -92,11 +92,11 @@
             <div class="card-body">
                 {% if user.is_authenticated %} 
                 <h3>Leave a comment:</h3>
-                <p>Posting as {{ user.username }}</p>
+                <p>Posting as <span class="posting-name">{{ user.username }}</span></p>
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %} 
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button type="submit" class="btn btn-outline-dark btn-lg">Submit</button>
                 </form>
                 {% endif %}
             </div>

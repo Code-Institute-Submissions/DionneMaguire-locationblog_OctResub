@@ -80,6 +80,7 @@ Navbar for signed in user
 alt attribute on images for screen readers
 capitalized the title and location so the page looks more uniform as we are relying on user input
 ##### Post detail
+added alt for images
 ##### Sign In form
 ##### Register Page
 ##### sign out page
