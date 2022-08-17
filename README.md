@@ -81,6 +81,7 @@ alt attribute on images for screen readers
 capitalized the title and location so the page looks more uniform as we are relying on user input
 ##### Post detail
 added alt for images
+have a width attribute on image tag but is throwing an error on W£C html validator, have checked that it is valid!
 ##### Sign In form
 ##### Register Page
 ##### sign out page

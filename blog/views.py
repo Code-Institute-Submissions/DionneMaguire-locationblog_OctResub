@@ -18,7 +18,7 @@ class PostList(generic.ListView):
     queryset = Post.objects.order_by('-created_on')
     template_name = 'post_list.html'
     paginate_by = 6
-   
+
 
 class PostDetail(View):
 
@@ -29,7 +29,7 @@ class PostDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
+
         return render(
             request,
             "post_detail.html",
@@ -59,7 +59,7 @@ class PostDetail(View):
             messages.success(request, 'Thanks for leaving a comment!')
         else:
             comment_form = CommentForm()
-        
+
         return render(
             request,
             "post_detail.html",
@@ -70,6 +70,7 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
+
 
 class PostLike(View):
 
@@ -83,6 +84,7 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+
 class PostCreate(CreateView):
     model = Post
     fields = ['title', 'location', 'content', 'featured_image', 'excerpt']
@@ -91,7 +93,8 @@ class PostCreate(CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        messages.success(self.request, 'You have successfully created a Location Post')
+        messages.success(
+            self.request, 'You have successfully created a Location Post')
         return super(PostCreate, self).form_valid(form)
 
 
@@ -103,7 +106,8 @@ class PostEdit(UpdateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        messages.success(self.request, 'You have successfully edited a Location post')
+        messages.success(
+            self.request, 'You have successfully edited a Location post')
         return super(PostEdit, self).form_valid(form)
 
 
@@ -113,6 +117,6 @@ class PostDelete(DeleteView):
     success_url = reverse_lazy('post_list')
     success_message = "You have successfully deleted the post"
 
-    def delete(self, request,*args, **kwargs):
+    def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
         return super(PostDelete, self).delete(request, *args, **kwargs)
