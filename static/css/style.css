@@ -29,8 +29,8 @@ h5 {
 }
 
 a.nav-link.active {
-    background-color:#ccc;
-    color: rgba(0, 0, 0, .7);
+    background-color:rgb(10 10 10);
+    color: rgba(10, 6, 6, 0.7);
 }
 
 .nav-login {
@@ -47,7 +47,7 @@ a.nav-link.active {
 .hero-image {
     width: 100%;
     height: 50vh;
-    background: url('https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2F5ee98b88-7bb6-11e8-8ce4-0bcac63244b2.jpg?crop=2250%2C1500%2C0%2C0');
+    background: url('https://res.cloudinary.com/dionnecloud/image/upload/v1660761455/hero-location_z3m1ie.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -148,7 +148,6 @@ a.nav-link.active {
 }
 
 .detail-img {
-    object-position: center center;
     width: 100%;
 }
 
@@ -172,4 +171,5 @@ a.nav-link.active {
     color: #e84610;
     border: none;
     background: transparent;
+    padding: 0;
 }

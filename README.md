@@ -29,12 +29,7 @@ Registered users can create posts, edit and delete their own posts.  They can al
 - restrict access to non-registered users
 - control users posts and comments for inappropriate use of the site. I have decided not to put in approval by superuser for adding posts and adding comments but instead have put a warning that the site admin will remove anything that is not in keeping with the sites ethos.
 
-### Agile Development Tool
-
-
-I am using an agile software development tool in the development of this website.  I am using Github projects, using a basic Kanban template.  I added automation so that as each new issue is added it adds it to the 'To Do' list for my project.  As I start working on each issue I move it to the 'In progress' column.  When the coding for each issues has been completed, the issue is then moved to the 'done' column.
-
-#### User Stories
+### User Stories
 
 
 I have the following user stories:
@@ -55,15 +50,85 @@ I have the following user stories:
 - Landing page - As a site user I can go to the landing page so that I can see the purpose of the website.
 - highlight active page - as a site user I can see the active page highlighted so that I know what page I am on.
 
+### Wireframes
+
+- home page
+
+[mobile home page](/documentation/wireframes/mobile_homepage.jpg)
+
+[mobile home page with drop down navigation](/documentation/wireframes/mobile_with_drop_nav.jpg)
+
+[mobile home page user signed in](/documentation/wireframes/mobile_home_drop_signedin.jpg)
+
+[desktop home page](/documentation/wireframes/desk_home.jpg)
+
+[desktop home page user signed in](/documentation/wireframes/desk_home_signedin.jpg)
+
+- register page
+
+[mobile register page](/documentation/wireframes/mobile_signup.jpg)
+
+[desktop register page](/documentation/wireframes/desk_register.jpg)
+
+- Login page
+
+[mobile login page](/documentation/wireframes/mobile_login.jpg)
+
+[desktop login page](/documentation/wireframes/desk_login.jpg)
+
+- Post list
+
+[mobile post list page](/documentation/wireframes/mobile_postlist_not_signedin.jpg)
+
+[desktop post list page](/documentation/wireframes/desk_postlist_not_signed_in.jpg)
+
+[mobile post list page user signed in](/documentation/wireframes/mobile_postlist_signed_in.jpg)
+
+[desktop post list page user signed in](/documentation/wireframes/desk_postlist_signedin.jpg)
+
+[mobile post list page author signed in](/documentation/wireframes/mobile_postlist_author.jpg)
+
+- Post Detail
+
+[mobile post detail page](/documentation/wireframes/mobile_postdetail.jpg)
+
+[desktop post detail page](/documentation/wireframes/desk_postdetail.jpg)
+
+- Create post page
+
+[mobile post create page](/documentation/wireframes/mobile_create.jpg)
+
+[desktop post create page](/documentation/wireframes/desk_create.jpg)
+
+- Edit post page
+
+[mobile post edit page](/documentation/wireframes/mobile_edit.jpg)
+
+[desktop post edit page](/documentation/wireframes/desk_edit.jpg)
+
+- Delete post page
+
+[mobile post delete page](/documentation/wireframes/mobile_delete.jpg)
+
+[desktop post edit page](/documentation/wireframes/desk_delete.jpg)
+
+- Sign out page
+
+[mobile signout page](/documentation/wireframes/mobile_signout.jpg)
+
+[desktop signout page](/documentation/wireframes/desk_signout.jpg)
+
+### Agile Development Tool
 
 
-### Features
+I am using an agile software development tool in the development of this website.  I am using Github projects, using a basic Kanban template.  I added automation so that as each new issue is added it adds it to the 'To Do' list for my project.  As I start working on each issue I move it to the 'In progress' column.  When the coding for each issues has been completed, the issue is then moved to the 'done' column.
 
 
-#### all Pages
+## Existing Features
 
+### Navbar and footer
 
-##### Navbar
+#### Navbar
 
 - Links to Home, post list, register and sign in/out pages. The home and post list pages are visible to and can be accessed by any user.  If the user is not signed in, the sign in and register links are visible on the navbar. If the user is signed in then there is a sign out link visible.  Also if the user is signed in there is a message to say user name is currently signed in, to act as an extra visual to the user that they are signed in! The active link is highlighted so that the user can see easily what page they are on.
 Navbar for not signed in user
@@ -72,41 +137,39 @@ Navbar for signed in user
 
 - the navbar collapes for mobile views
 
-##### Footer
+#### Footer
 - clear links for the user to go to facebook, twitter, instagram and youtube.
 
-##### Home Page
-##### Post list
+### Home Page
+### Post list page
 alt attribute on images for screen readers
 capitalized the title and location so the page looks more uniform as we are relying on user input
-##### Post detail
+### Post detail page
 added alt for images
 have a width attribute on image tag but is throwing an error on W£C html validator, have checked that it is valid!
-##### Sign In form
-##### Register Page
-##### sign out page
-##### Create Post
-##### Edit Post
-##### Delete Post
+#### Register Page
+#### Sign In form
 
-### Wireframes
-- home page
-- Post list
-- Post Detail
-- sign in page
-- register page
-- create post page
-- edit post page
-- delete post page
-- sign out page
+#### sign out page
+#### Create Post
+#### Edit Post
+#### Delete Post
+
+## super user
+
+I created a superuser so that they can create, read, update and delete posts so that they can manage the blogs content.
+
+## Design
+
+The design is kept simple to let the location posts take centre stage.  Also to make it easy for users to navigate the site.
 
 
 
-## Data Model
+### Data Model
 
 There are two models for the database: a post model and a comment model
 
-### Location post model
+#### Location post model
 
 | Key | Name | Type
 |-----|----------------|------------------|
@@ -121,7 +184,7 @@ There are two models for the database: a post model and a comment model
 | many-to-many | likes | User Model
 | label for url | slug (unique) | slugfield
 
-### Comment model
+#### Comment model
 
 | Key | Name | Type
 |--------|----------------|-------------------|
@@ -131,15 +194,13 @@ There are two models for the database: a post model and a comment model
 | | created_on | DateTime
 
 
-## Design
-
-The design is kept simple to let the location posts take centre stage.  Also to make it easy for users to navigate the site.
 
 ### Typography
 
 The fonts I have selected are :  Nunito for the text and Roboto for the headings.  These have been selected as they are clear and simple.
 
-### Images
+### Images/color
+I have kept the layout and colours simple. 
 
 ## Technologies used
 
@@ -165,26 +226,20 @@ The fonts I have selected are :  Nunito for the text and Roboto for the headings
 - Balsamiq for the wireframes
 
 
+## Code Validation
+### Html validation
+### CSS Validation
+### PEP8 Validation
+
 ## Testing
-### Code Validation
-#### Html validation
-#### CSS Validation
-#### PEP8 Validation
-#### Lighthouse
-Validator checks HTML, CSS, Python
-URL validator???
-
 ### Manual testing
-
-#### Responsiveness 
-Check each page looks good and is easily navigated at all screen sizes.
-
-#### Testing user stories
+### Lighthouse
 
 
 
 ## Deployment
 
+### deployment to heroku
 Initial deployment
 I followed the 'I think therefore I blog' walkthrough to create a basic django project.  I used the code institute template. 
 - I installed django and supporting libraries
@@ -192,9 +247,22 @@ I followed the 'I think therefore I blog' walkthrough to create a basic django p
 - I set the project to use Cloudinary and PostgreSQL
 - I deployed the empty project to heroku
 
-## super user
+### Forking the Github repository
+By forking the GitHub Repository you will be able to make a copy of the original repository on your own GitHub account allowing you to view and/or make changes without affecting the original repository by using the following steps:
 
-I created a superuser so that they can create, read, update and delete posts so that they can manage the blogs content.
+- Log in to GitHub and locate the GitHub Repository
+- At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
+- You should now have a copy of the original repository in your GitHub account.
+
+### Making a local clone
+- Log in to GitHub and locate the GitHub Repository
+- Under the repository name, click "Clone or download".
+- To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+- Open commandline interface on your computer
+- Change the current working directory to the location where you want the cloned directory to be made.
+- Type git clone, and then paste the URL you copied above.
+- Press Enter. Your local clone will be created.
+
 
 ## Credits
 
