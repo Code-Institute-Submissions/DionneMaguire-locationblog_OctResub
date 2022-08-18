@@ -81,6 +81,8 @@ a.nav-link.active {
     color: #4a4a4f;
 }
 
+/* post list page */
+
 .card {
     border: none;
     background-color: transparent;
@@ -113,6 +115,9 @@ a.nav-link.active {
 .card-title {
     text-transform: uppercase;
 }
+
+/* post detail page */
+
 .masthead {
     margin-top: 10px;
     overflow: hidden;
@@ -159,7 +164,6 @@ a.nav-link.active {
 
 .post-subtitle {
     margin-left: 5%;
-/*    color: lightgray;*/
 }
 
 .posting-name {
