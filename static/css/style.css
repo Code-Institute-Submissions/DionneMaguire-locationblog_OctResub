@@ -101,7 +101,7 @@ a.nav-link.active {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #23bbbb;
+    background-color: #048181;
 }
 
 .author {
@@ -123,7 +123,7 @@ a.nav-link.active {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #0e151c;
     color: white;
     position: relative;
 }
@@ -140,7 +140,7 @@ a.nav-link.active {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #0e151c;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -159,7 +159,7 @@ a.nav-link.active {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+/*    color: lightgray;*/
 }
 
 .posting-name {
