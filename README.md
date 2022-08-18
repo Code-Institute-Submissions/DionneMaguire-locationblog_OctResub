@@ -410,12 +410,47 @@ for codeloco.urls.py file
 
 
 ## Testing
+
 ### Manual testing
+
+#### Responsiveness
+
+I checked each page (home, signup, login, logout, post, detail, create, edit, delete) to make sure everything looked ok at all screen sizes. 
+
 ### Lighthouse
 
+Testing of desktop for Home page
 
+![lighthouse for desktop home page](/documentation/testing/light_desk_home.png)
 
-## Deployment and making a clone
+Testing of desktop for post page
+
+![lighthouse for desktop post page](/documentation/testing/light_desk_post.png)
+
+Testing of desktop for detail page
+
+![lighthouse for desktop detail page](/documentation/testing/light_desk_detail.png)
+
+Testing of mobile for home page
+
+![lighthouse for mobile home page](/documentation/testing/light_mob_home.png)
+
+Testing of mobile for post page
+
+![lighthouse for mobile post page](/documentation/testing/light_mob_post.png)
+
+Testing for mobile for detail page
+
+![lighthouse for mobile detail page](/documentation/testing/light_mob_detail.png)
+
+### Bugs 
+
+- not auto filling the slug field when user created a post - I needed to use slugify and then this worked.
+- not pulling in the image when a user created a post - needed to add enctype='multipart/form-data to the form.
+- some issues with accessibilty not a big enough contrast between the text and the background. I changed these to have a darker background and white text so that there was a bigger contrast.
+- width attribute 100% giving an error in W3C html validator, couldn't find a way around this.
+
+## Deployment, forking and making a clone
 
 ### Deployment to Heroku
 
