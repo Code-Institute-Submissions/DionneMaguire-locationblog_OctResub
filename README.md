@@ -35,7 +35,7 @@ Registered users can create posts, edit and delete their own posts.  They can al
 I used Guthub issues to record the following user stories:
  
 - Manage posts - As a site admin I can create, read, update and delete posts so that I can manage the blog content.
-- Pagination - As a site user I can view a paginated list of posts so that I can easily selecta post to view.
+- Pagination - As a site user I can view a paginated list of posts so that I can easily select a post to view.
 - View likes - As a site user/ admin I can view the number of likes on each post so that I can see which is most popular.
 - View post list - As a site user I can view a list of posts so that I can select one to read.
 - View a detail post - As a signed in user I can click on a post so that I can read the full text.
@@ -124,6 +124,9 @@ I have used balsamiq to create the following wireframes for both desktop and mob
 
 I am using an agile software development tool in the development of this website.  I am using Github projects, using a basic Kanban template.  I added automation so that as each new issue is added it adds it to the 'To Do' list for my project.  As I start working on each issue I move it to the 'In progress' column.  When the coding for each issues has been completed, the issue is then moved to the 'done' column.
 
+![my kanban board](/documentation/images/kanban_1.png)
+
+![my kanban board](/documentation/images/kanban_1.png)
 
 ## Existing Features
 
@@ -413,9 +416,33 @@ for codeloco.urls.py file
 
 ### Manual testing
 
-#### Responsiveness
+I checked each page (home, signup, login, logout, post, detail, create, edit, delete) to make sure everything looked ok at all screen sizes.
 
-I checked each page (home, signup, login, logout, post, detail, create, edit, delete) to make sure everything looked ok at all screen sizes. 
+I am going to use the user stories as my structure for manually testing my project.
+ 
+#1 manage posts
+- as admin I can create a post
+If I do not enter data in the required fields it gives a warning to add data to the required fields.  It is ok not to have data in the excerpt field. It is also ok to not include an image, if an image is not added by the admin/user a stock image will be included.
+
+![showing warnings for required fields](/documentation/testing/admin_add_post_1.png)
+
+when all required fields are filled and the post is saved, we get a success message and can see the new post.
+
+![show success message and new post in list](/documentation/testing/admin_add_post_2.png)
+
+- as admin I can read a post
+
+Check in the website that the new post is there with correct data, including stock image.
+
+![new post visible on website](/documentation/testing/admin_add_post_3.png)
+
+- as admin I can update a post
+
+Similar to create post in update if any of the required fields are not filled a warning is shown and fields that need filled are highlighted.
+
+![warnings for update similar to create](/documentation/testing/admin_update_post_1.png)
+
+when all required fields are filled a success message is given and I can see the updated
 
 ### Lighthouse
 
