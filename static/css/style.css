@@ -16,12 +16,13 @@ h5 {
 /* Navbar*/
 
 .navbar {
-    background-color: rgb(92 88 88);
+    background-color: #042960;
     color: white;
 }
 
 .navbar-brand {
     color: white;
+    font-family: 'Cedarville Cursive', cursive;
 }
 
 .nav-link {
@@ -29,7 +30,7 @@ h5 {
 }
 
 a.nav-link.active {
-    background-color:rgb(10 10 10);
+    background-color:#0b63e5;
     color: rgba(10, 6, 6, 0.7);
 }
 
@@ -40,7 +41,7 @@ a.nav-link.active {
 }
 
 .footer {
-    background-color: rgb(92 88 88);
+    background-color: #042960;
     color: white;
 }
 /* Landing page */
@@ -55,12 +56,16 @@ a.nav-link.active {
     position: relative;
 }
 
+.hero-container {
+    padding: 0;
+}
 .hero-overlay {
     align-content: center;
 }
 
 .hero-text {
     margin-top: 20px;
+    text-align: center;
 }
 
 .hero-text h1 {
@@ -74,6 +79,12 @@ a.nav-link.active {
     font-size: 2em;
     text-align: center;
 }
+
+.btn-hero {
+    background-color: white;
+    color: blue;
+}
+
 .brand {
     font-family: "Open Sans", sans-serif;
     font-size: 1.4rem;

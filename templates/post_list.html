@@ -26,7 +26,11 @@
                             </div>
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <h5 class="card-title">{{ post.location }}</h5>
+                                {% if post.excerpt != "" %}
                                 <p class="card-text">{{ post.excerpt }}</p>
+                                {% else %}
+                                <br />
+                                {% endif %}
                             <hr />
                             <p class="card-text text-muted h6">{{ post.created_on}}<i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}</p>

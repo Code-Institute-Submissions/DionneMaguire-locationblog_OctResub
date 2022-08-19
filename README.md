@@ -418,9 +418,12 @@ for codeloco.urls.py file
 
 I checked each page (home, signup, login, logout, post, detail, create, edit, delete) to make sure everything looked ok at all screen sizes.
 
+*** overall check on navbar and footer and overall navigation between pages
+
 I am going to use the user stories as my structure for manually testing my project.
  
 #1 manage posts
+
 - as admin I can create a post
 If I do not enter data in the required fields it gives a warning to add data to the required fields.  It is ok not to have data in the excerpt field. It is also ok to not include an image, if an image is not added by the admin/user a stock image will be included.
 
@@ -443,6 +446,55 @@ Similar to create post in update if any of the required fields are not filled a 
 ![warnings for update similar to create](/documentation/testing/admin_update_post_1.png)
 
 when all required fields are filled a success message is given and I can see the updated
+
+![updated post visible and success message](/documentation/testing/admin_update_post_2.png)
+
+Checked on website to check updated data there.
+
+![updated post on website](/documentation/testing/admin_update_post_3.png)
+
+- as admin I can delete a post
+
+When the admin selects the post they want to delete, select action - delete and then clicks go, the admin is asked are they sure they want to delete this post. They have the option of going back or deleting the post.
+
+![are you sure you want to delete](/documentation/testing/admin_delete_1.png)
+
+When the post is successfully deleted you get a success message and the post is deleted
+
+![successful delete](/documentation/testing/admin_delete_2.png)
+
+Also want admin to be able to delete a comment, if a user has put up a comment that needs to be removed.
+so similar to the post delete, they select the comment, set action to delete and click go.
+
+![select comment for delete](/documentation/testing/admin_delete_3.png)
+
+Asked if they are sure they want to dlete exactly same as delete post and they just need to confirm. Get a message to say successfully deleted.
+
+![successfully deleted comment](/documentation/testing/admin_delete_4.png)
+
+Check on website to ensure that comment has been deleted.
+
+![check comment deleted on website](/documentation/testing/admin_delete_5.png)
+
+#2 pagination
+
+- as a site user I can view a paginated list of posts
+By clicking the posts button on the navbar I can view a paginated list of posts, on desktop there are 6 posts per page, 3 in the first row and 3 underneath, there is a next button at the bottom of the page to go to the next page.  On the next page there is a back button to return to the first page.
+On a mobile device there is one post the full width of the screen but still 6 posts per page and again the navigation between the pages with next and prev buttons.
+
+![pagination](/documentation/testing/pagination.png)
+
+#3 view likes
+
+- as a site user I can view the number of likes on each post - both logged in and non logged in users can see the number of likes.
+
+![view likes on a post](/documentation/testing/view_likes.png)
+
+#4 view post list
+
+- as a logged in user I can view a list of posts so I can select one to view.  Being able to select one to view, the detail view is only available to logged in users, so the view button is not displayed for non logged in users.
+
+![view post list](/documentation/testing/view_post_list.png)
 
 ### Lighthouse
 
