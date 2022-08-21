@@ -457,11 +457,11 @@ for views.py file
 
 ![views.py](/documentation/validation/PEP8-views-py.png)
 
-for settings.py file
+for codeloco>settings.py file
 
 ![settings.py](/documentation/validation/PEP8-settings-py.png)
 
-for codeloco.urls.py file
+for codeloco>urls.py file
 
 ![codeloco.urls.py](/documentation/validation/PEP8-codeloco-urls-py.png)
 
