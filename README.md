@@ -3,8 +3,8 @@
 ## Purpose of this site
 
 This site has been created so that users can share and seek information about places to visit.  
-Unregistered users can view a summary of the posts, to get a flavour of what the site does.  
-Registered users can create posts, edit and delete their own posts.  They can also comment and like other peoples posts.
+Unregistered users can view a summary of the posts and to get a flavour of what the site does.  
+Registered users can create, edit and delete their own posts.  They can also comment and like other people's posts.
 
 ![am i responsive](/documentation/testing/location_responsive.png)
 
@@ -25,17 +25,17 @@ Registered users can create posts, edit and delete their own posts.  They can al
 - view posts and leave comments and likes
 - create their own post
 - edit and delete their own posts only
-- be able to logout of my account to keep my account safe
+- be able to logout of their account to keep their account safe
 
 #### Site Owner would like to:
 - restrict access to non-registered users
-- control users posts and comments for inappropriate use of the site. I have decided not to put in approval by superuser/admin for adding posts and adding comments but instead have put a warning that the site admin will remove anything that is not in keeping with the sites ethos.
+- control users posts and comments for inappropriate use of the site. I have decided not to put in approval by superuser/admin for adding posts and adding comments but instead have put a warning that the site admin will remove anything that is not in keeping with the site's ethos
 
 
 ### User Stories
 
 
-I used Guthub issues to record the following user stories:
+I used Github Issues to record the following user stories:
  
 - Manage posts - As a site admin I can create, read, update and delete posts so that I can manage the blog content.
 - Pagination - As a site user I can view a paginated list of posts so that I can easily select a post to view.
@@ -46,18 +46,18 @@ I used Guthub issues to record the following user stories:
 - Account registration - As a site user I can register an account so that I can comment and like posts.
 - Comment on a post - As a signed in user I can leave a comment on a post so that I can interact with the content.
 - Like/unlike - As a signed in user I can like or unlike a post so that I can interact with the content.
-- Create a post - As a signed in user I can create a new post so that I can share cool locations with other users.
-- Edit posts - As a signed in user I can edit my posts so that i can update or correct information.
+- Create a post - As a signed in user I can create a new post so that I can share locations with other users.
+- Edit posts - As a signed in user I can edit my posts so that I can update or correct information.
 - Delete posts - As a signed in user I can delete my posts so that I can remove them from the website.
-- Feedback messages - As a user I get messages back after I perform an action so that I know whether i have completed the action correctly.
+- Feedback messages - As a user I get messages back after I perform an action so that I know whether I have completed the action correctly.
 - Landing page - As a site user I can go to the landing page so that I can see the purpose of the website.
-- highlight active page - as a site user I can see the active page highlighted so that I know what page I am on.
+- Highlight active page - as a site user I can see the active page highlighted so that I know what page I am on.
 
 
 ### Agile Development Tool
 
 
-I am using an agile software development tool in the development of this website.  I am using Github projects, using a basic Kanban template.  I added automation so that as each new issue is added it adds it to the 'To Do' list for my project.  As I start working on each issue I move it to the 'In progress' column.  When the coding for each issues has been completed, the issue is then moved to the 'done' column.
+I am using an agile software development tool in the development of this website.  I am using Github Projects, using a basic Kanban Template.  I added automation so that as each new issue is added, it adds it to the 'To Do' list for my project.  As I start working on each issue I move it to the 'In progress' column.  When the coding for each issue has been completed, the issue is then moved to the 'done' column.
 
 ![my kanban board](/documentation/images/kanban_1.png)
 
@@ -67,7 +67,7 @@ I am using an agile software development tool in the development of this website
 ### Wireframes
 
 
-I have used balsamiq to create the following wireframes for both desktop and mobile devices.
+I have used Balsamiq to create the following wireframes for both desktop and mobile devices.
 - home page
 
 [mobile home page](/documentation/wireframes/mobile_homepage.jpg)
@@ -139,7 +139,7 @@ I have used balsamiq to create the following wireframes for both desktop and mob
 ## Existing Features
 
 
-### Navbar and footer
+### Navbar and Footer
 
 
 #### Navbar
@@ -148,7 +148,7 @@ The navbar is plain and simple so that it is very easy for the user to read.  Th
 
 ![Navbar for not signed in user](/documentation/images/navbar.png)
 
-If the user is signed in, then there is a Logout link visible.  Also if the user is signed in there is a message to say user name is currently signed in, to act as an extra visual to the user that they are signed in! 
+If the user is signed in, then there is a Logout link visible.  Also if the user is signed in there is a message to say user name to act as an extra visual to the user that they are signed in! 
 
 ![Navbar for signed in user](/documentation/images/navbar_signedin.png)
 
@@ -174,7 +174,7 @@ The footer is very simple with minimal information, just displaying social media
 
 I have used Allauth for register, login and logout.
 
-When a user clicks the register button they are brought to the register page where they have to fill in their username, an email address but this is optional and their password, which they then have to confirm. Then click the button sign up. If the user has come to register instead of login, there is text to say if you have already an account click login. If the registration is successful the user is redirected back to the home page and a message just below the navbar will appear for 3 seconds to say successfully signed in as 'username'.
+When a user clicks the register button they are brought to the register page where they have to fill in their username, an email address but this is optional and their password, which they then have to confirm. Then the user can click the button to sign up. If the user has come to register instead of login, there is text to say if you have already an account click login. If the registration is successful the user is redirected back to the home page and a message just below the navbar will appear for 3 seconds to say successfully signed in as 'username'.
 
 ![Register](/documentation/images/register.png)
 
@@ -194,7 +194,7 @@ If a user has already registered they can log into the site in the login page.  
 ### Logout page
 
 
-The user is asked are they sure they want to logout and then they can click the sign out button. the user is redirected back to the home page. a message will appear for 3 seconds under the navbar to say you have signed out.
+The user is asked are they sure they want to logout and then they can click the sign out button. The user is redirected back to the home page. A message will appear for 3 seconds under the navbar to say you have signed out.
 
 ![Logout](/documentation/images/logout.png)
 
@@ -208,9 +208,11 @@ The home page consists of a hero image of a beautiful landscape, with the hero t
 
 ![hero image](/documentation/images/hero_image.png)
 
-Under the hero image, there is a short text to tell the user how this website works. If the user is not logged in they can only see the home page and the post list page. A signed in user can also see the post detail page, can like/unlike posts, can leave comments, can create their own post, can edit their own post and delete their own post.
+Under the hero image, there is a short text to tell the user how this website works. 
 
 ![home information](/documentation/images/home.png)
+
+If the user is not logged in they can only see the home page and the post list page. A signed in user can also see the post detail page, can like/unlike posts, can leave comments, can create their own post, can edit their own post and delete their own post.
 
 
 ### Posts Page
@@ -228,7 +230,7 @@ In desktop there are 6 posts per page, with 3 on the top row and 3 underneath.  
 I have added the alt attribute on images for screen readers to make the site more accessible.
 I have also capitalized the title and location so the page looks more uniform as we are relying on user input.
 
-For logged in users only, they can see a view button so that they can view all the detail posts.  I thought about making the image clickable to direct to the detail page but I thought there would be a lot of repetitive code with having to check if the user was logged in too. So just left it as the view button. For users not logged in the view button is not visible/available to them. 
+For logged in users only, they can see a view button so that they can view all the detail posts.  I thought about making the image clickable to direct to the detail page but I thought there would be a lot of repetitive code with having to check if the user was logged in too. So I just left it as the view button. For users not logged in the view button is not visible/available to them. 
 
 ![able to see the view button](/documentation/images/view.png)
 
@@ -237,11 +239,11 @@ If the user is the author of the post they also have access to an edit and delet
 ![able to see the edit & delete button](/documentation/images/all_buttons.png)
 
 
-### Post Detail page
+### Post Detail Page
 
 
 This page can only be accessed by logged in users. I have added alt atributes for the images for accessibility.
-On mobile view the image is not displayed as it takes up too much room. There is a header banner which includes the title, location, author and date created.  Then under the banner is the content from the post.  Under the content there is a heart icon which acts as a button to allow the user to like or unlike the post.  If the heart is filled in red it means that this user has liked the post.  If the heart was just an outline in red it means this user has not liked this post.  There is logic in place that if a user has liked the post if they click the heart it will unlike the post. There is also a number beside the heart to show how many likes this post has. Also there is a comment icon again with a number to show how many comments.
+On mobile view the image is not displayed as it takes up too much room. There is a header banner which includes the title, location, author and date created.  Then under the banner is the content from the post.  Under the content there is a heart icon which acts as a button to allow the user to like or unlike the post.  If the heart is filled in red it means that this user has liked the post.  If the heart was just an outline in red it means this user has not liked this post.  There is logic in place that if a user has liked the post if they then click the heart again it will unlike the post. There is also a number beside the heart to show how many likes this post has. Also there is a comment icon again with a number to show how many comments.
 There is a back to posts button so the user can easily navigate back to the posts page.
 
 ![post detail](/documentation/images/title_detail.png)
@@ -289,7 +291,7 @@ The user will be redirected to the posts page.  A message will appear just under
 ### Delete Post
 
 
-If a user clicks the delete button on the posts page for a post, they will be directed to the delete post page.  Here there is a button to 'go back' in case they accidently cam ehere and didn't mean to delete the post. this will bring them back to the posts page. The delete page checks to make sure that the user wants to delete the post - asking them are they sure? The name of the post that is about to be deleted is displayed. 
+If a user clicks the delete button on the posts page for a post, they will be directed to the delete post page.  There is a button to 'go back' in case they accidently came here and didn't mean to delete the post. This will bring them back to the posts page. The delete page checks to make sure that the user wants to delete the post - asking them are they sure? The name of the post that is about to be deleted is displayed. 
 
 ![delete post](/documentation/images/delete_post.png)
 
@@ -344,7 +346,7 @@ I needed two data models to make this website work.  The first data model is the
 ### Typography
 
 
-The fonts I have selected are :  Nunito for the text and Roboto for the headings and Cedarville Cursive for the brand.  These have been selected as they are clear and simple.
+The fonts I have selected are :  Nunito for the text, Roboto for the headings and Cedarville Cursive for the brand.  These have been selected as they are clear and simple.
 
 
 ### Images/color
@@ -439,7 +441,7 @@ I copied my style.css file into the W3C CSS validation service.
 ### PEP8 Validation
 
 
-I copied and pasted my python files into the PEP8 vslidator
+I copied and pasted my python files into the PEP8 validator
 
 for models.py file
 
@@ -471,7 +473,7 @@ for codeloco>urls.py file
 
 
 
-### Manual testing
+### Manual Testing
 
 
 I checked each page (home, signup, login, logout, post, detail, create, edit, delete) to make sure everything looked ok at all screen sizes using devtools.  I also got family and friends to test my site on their different devices.
@@ -482,11 +484,11 @@ I am going to use the user stories as my structure for manually testing my proje
 
 - as admin I can create a post
 
-If I do not enter data in the required fields it gives a warning to add data to the required fields.  It is ok not to have data in the excerpt field. It is also ok to not include an image, if an image is not added by the admin/user a stock image will be included.
+If I do not enter data in the required fields it gives a warning to add data to the required fields.  It is ok not to have data in the excerpt field. It is also ok not to include an image, if an image is not added by the admin/user a stock image will be included.
 
 ![showing warnings for required fields](/documentation/testing/admin_add_post_1.png)
 
-when all required fields are filled and the post is saved, we get a success message and can see the new post.
+When all required fields are filled and the post is saved, we get a success message and can see the new post.
 
 ![show success message and new post in list](/documentation/testing/admin_add_post_2.png)
 
@@ -498,15 +500,15 @@ Check in the website that the new post is there with correct data, including sto
 
 - as admin I can update a post
 
-Similar to create post in update if any of the required fields are not filled a warning is shown and fields that need filled are highlighted.
+Similar to create post in update if any of the required fields are not filled a warning is shown and fields that need to be filled are highlighted.
 
 ![warnings for update similar to create](/documentation/testing/admin_update_post_1.png)
 
-when all required fields are filled a success message is given and I can see the updated
+When all required fields are filled a success message is given and I can see the updated post.
 
 ![updated post visible and success message](/documentation/testing/admin_update_post_2.png)
 
-Checked on website to check updated data there.
+Checked on website to check updated data is there.
 
 ![updated post on website](/documentation/testing/admin_update_post_3.png)
 
@@ -520,8 +522,8 @@ When the post is successfully deleted you get a success message and the post is 
 
 ![successful delete](/documentation/testing/admin_delete_2.png)
 
-Also want admin to be able to delete a comment, if a user has put up a comment that needs to be removed.
-so similar to the post delete, they select the comment, set action to delete and click go.
+Also I want admin to be able to delete a comment, if a user has put up a comment that needs to be removed.
+So similar to the post delete, they select the comment, set action to delete and click go.
 
 ![select comment for delete](/documentation/testing/admin_delete_3.png)
 
@@ -537,8 +539,8 @@ Check on website to ensure that comment has been deleted.
 
 - as a site user I can view a paginated list of posts
 
-By clicking the posts button on the navbar or the call to action button on the hero image I can view a paginated list of posts, on desktop there are 6 posts per page, 3 in the first row and 3 underneath, there is a next button at the bottom of the page to go to the next page.  On the next page there is a back button to return to the first page.
-On a mobile device there is one post the full width of the screen but still 6 posts per page and again the navigation between the pages with next and prev buttons.
+By clicking the posts button on the navbar or the call to action button on the hero image I can view a paginated list of posts. On desktop there are 6 posts per page, 3 in the first row and 3 underneath, there is a next button at the bottom of the page to go to the next page.  On the next page there is a back button to return to the first page.
+On a mobile device there is one post, the full width of the screen but still 6 posts per page and again the navigation between the pages with next and prev buttons.
 
 ![pagination](/documentation/testing/pagination.png)
 
@@ -650,8 +652,8 @@ Also increases the number of likes.  The same user cannot like the same post mul
 
 -as a logged in user I can create a post
 
-create post on the navbar is only visible to logged in users. When the create post button is clicked it takes the user to 'Add a location Post' page.
-Cannot enter an empty form, user gets a warning.
+Create post on the navbar is only visible to logged in users. When the create post button is clicked it takes the user to 'Add a location Post' page.
+The user cannot enter an empty form, user gets a warning.
 
 ![create post warning](/documentation/testing/create_post_warn.png)
 
@@ -673,16 +675,16 @@ Check if the user selects an image this image is showing - yes
 
 The edit button is only available on the post page if the user is the author of the post - yes 
 
-When the edit button is clicked, the user is redirected to the 'Edit location Post' page - yes
+When the edit button is clicked, the user is redirected to the 'Edit Location Post' page - yes
 
-Check that the fields are auto filled with the information from the post that the user wants to edit - yes
-Again if any field is deleted from a required field a warning is given to the user.
+Check that the fields are auto filled with the information from the post that the user wants to edit - yes.
+Again, if any field is deleted from a required field a warning is given to the user.
 
 ![edit post warning](/documentation/testing/edit_post_warn.png)
 
 When edit is clicked the user should be redirected to the posts page - yes
 
-The post should be visible on the posts page with the fields that were edited changed.
+The post should be visible on the posts page with the fields that were edited changed - yes
 
 ![edit check](/documentation/testing/edit_check.png)
 
@@ -814,9 +816,9 @@ Testing for mobile for detail page
 
 - not auto filling the slug field when user created a post - I needed to use slugify and then this worked.
 
-- not pulling in the image when a user created a post - needed to add enctype='multipart/form-data to the form.
+- not pulling in the image when a user created a post - needed to add enctype='multipart/form-data' to the form.
 
-- some issues with accessibilty not a big enough contrast between the text and the background. I changed these to have a darker background and white text so that there was a bigger contrast.
+- some issues with accessibilty, not a big enough contrast between the text and the background. I changed these to have a darker background and white text so that there was a bigger contrast.
 
 - on delete page, when a post was successfully deleted the user was redirected to the home page instead of the posts page - changed the url in the link to point to the post_list.
 
@@ -836,41 +838,41 @@ I followed the 'I think therefore I blog' walkthrough to create a basic django p
  I installed django, gunicorn, psycopg2, cloudinary.
 I created the requirements.txt file.
 
-- I created a new django project called 'codeloco' and a django app called 'blog'
+- I created a new django project called 'codeloco' and a django app called 'blog'.
 I need to add blog to installed apps in settings.py.
 After adding new app we need to migrate the changes to the database.
 
 - I set the project to use Cloudinary and PostgreSQL database.
-I created a heroku app called codeloco
-I attached it to the database
+I created a heroku app called codeloco.
+I attached it to the database.
 I created an env.py file - this contains all the secret environmental variables. I need to reference this in settings.py file.
-I connect to cloudinary and tell django to use cloudinary to store media and static files.
+I connected to cloudinary and tell django to use cloudinary to store media and static files.
 I set up for static and media at the bottom of settings.py file.
-I need to tell django where our templates will be stored.
-I need to add heroku host name into allowed hosts in settings.py file.
-I need to create 3 directories at the same level as manage.py file for media, static and templates.
-I need to create a Procfile this tells heroku how to run our project.
+I needed to tell django where our templates will be stored.
+I needed to add heroku host name into allowed hosts in settings.py file.
+I needed to create 3 directories at the same level as manage.py file for media, static and templates.
+I needed to create a Procfile this tells heroku how to run our project.
 
-- I deployed the empty project to heroku
-In Heroku in teh deploy tab.
-I click Github.
-I search for my repo.
+- I deployed the empty project to Heroku.
+In Heroku in the deploy tab,
+I click GitHub,
+I search for my repo,
 Then scroll down and deploy branch.
-Watch the build to check it was successful.
-Then open app
+I watched the build to check it was successful and
+then opened the app.
 
 When I had completed my testing in development, in the settings.py file I set DEBUG = False and added X_FRAME_OPTION = 'SAMEORIGIN'.
-I git add ., then git commit git push.
-In heroku I went into config vars and deleted the DISABLE_COLLECTSTATIC = 1
-In the deploy tab in heroku, I deployed branch and watched the build to check it was successful. Then I opened the app and repeated all my testing to ensure this worked the same as my local testing.
+I git add ., then git commit and git push.
+In Heroku I went into config vars and deleted the DISABLE_COLLECTSTATIC = 1
+In the deploy tab in Heroku, I deployed branch and watched the build to check it was successful. Then I opened the app and repeated all my testing to ensure this worked the same as my local testing.
 
 
-### Forking the Github repository
+### Forking the GitHub Repository
 
 
 By forking the GitHub Repository you will be able to make a copy of the original repository on your own GitHub account allowing you to view and/or make changes without affecting the original repository by using the following steps:
 
-- Log in to GitHub and locate the GitHub Repository
+- Log in to GitHub and locate the GitHub Repository.
 - At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
 - You should now have a copy of the original repository in your GitHub account.
 
@@ -878,10 +880,10 @@ By forking the GitHub Repository you will be able to make a copy of the original
 ### Making a local clone
 
 
-- Log in to GitHub and locate the GitHub Repository
+- Log in to GitHub and locate the GitHub Repository.
 - Under the repository name, click "Clone or download".
 - To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-- Open commandline interface on your computer
+- Open commandline interface on your computer.
 - Change the current working directory to the location where you want the cloned directory to be made.
 - Type git clone, and then paste the URL you copied above.
 - Press Enter. Your local clone will be created.
@@ -891,22 +893,22 @@ By forking the GitHub Repository you will be able to make a copy of the original
 
 
 
-- I used 'I think therefore I blog' to set up files, heroku app, cloudinary, environmental variables and github projects.
-- I used github projects and kanban for user stories like 'I think therefore I blog'
+- I used 'I think therefore I blog' to set up files, Heroku app, Cloudinary, environmental variables and GitHub Projects.
+- I used GitHub Projects and Kanban for user stories like 'I think therefore I blog'
 - I used 'tails on trails' to help set out what I wanted for my project
 - I got help with navigation from 'Tails on Trails'.
 - I used card system from 'I think therefore I blog' for displaying posts.
 - Ciara O'sullivan on slack for solving my slug problem when user creating post didn't create the slug field.
 - I used the messages from 'I think therefore I blog'
-- To help with crud functionality I used Dennis Ivy you tube video for to do list app
-- To understand class based views explained well by Dennis Ivy
+- To help with crud functionality I used Dennis Ivy Youtube video for to do list app.
+- Class based views was explained well by Dennis Ivy.
 - I got help for showing active page on navbar from 'Favoureats' by Siobhan Gorman.
 - I got my hero image from thetimes.co.uk.
-- I found solution to my too long lines in settings.py in code.djangoproject.com/ticket/28163.
-- I followed structure of readme from JoGorska_alumni_lead
-- I used bootstrap links from 'I think therefore I blog'
-- I used 'I think therefore I blog' for the bases of my footer
-- I used the stock picture from wallpapersafari.com
+- I found the solution to my too long lines in settings.py in code.djangoproject.com/ticket/28163.
+- I followed structure of readme from JoGorska_alumni_lead.
+- I used bootstrap links from 'I think therefore I blog'.
+- I used 'I think therefore I blog' for the bases of my footer.
+- I used the stock picture from wallpapersafari.com.
 
 
 
