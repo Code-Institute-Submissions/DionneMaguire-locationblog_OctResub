@@ -94,6 +94,12 @@ a.nav-link.active {
 
 /* post list page */
 
+.login-message {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
 .card {
     border: none;
     background-color: transparent;

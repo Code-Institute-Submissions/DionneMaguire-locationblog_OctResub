@@ -164,7 +164,7 @@ In mobile view the navbar is collapsed into a hamburger icon, which when clicked
 
 #### Footer
 
-The footer is very simple with minimal information, just displaying social media options.
+The footer is very simple with minimal information, just displaying social media options.  When the icons are clicked, they open in a new tab so that the user still has my web site open.
 
 ![Footer](/documentation/images/footer.png)
 
@@ -238,6 +238,12 @@ If the user is the author of the post they also have access to an edit and delet
 
 ![able to see the edit & delete button](/documentation/images/all_buttons.png)
 
+After testing and getting feedback I have put a message at the top of the posts page to tell users that have not logged in that they need to log in to read the full detailed post.  I have also included the link to login.  This message is not visible for users that have logged in.
+
+![message to login to see full post](/documentation/images/login_message.png)
+
+I have amended the post to only show the date and not the date and time. I felt the date was enough to display.
+
 
 ### Post Detail Page
 
@@ -263,6 +269,8 @@ Under this is the comments section, so it displays any comments that have been l
 
 ![message to say successfully left comment](/documentation/images/comment.png)
 
+Similar to the post list I have amended the detail post and the comment to only display the date and not the time.
+
 
 ### Create Post
 
@@ -274,6 +282,10 @@ If a signed in user clicks the 'Create Post' on the navbar it brings them to the
 When the user clicks the create button, they will be redirected back to the posts page. A message will appear just under the navbar to say successfully created a post.
 
 ![message to say successfully created post](/documentation/images/create.png)
+
+After testing and getting feedback I have put in a brief explanation of the excerpt field - brief description.  This is to help the user in filling in the form.
+
+![explanation of excerpt](/documentation/images/excerpt.png)
 
 
 ### Edit Post
@@ -786,6 +798,15 @@ When on the logout page
 
 ![highlight logout](/documentation/testing/high_logout.png)
 
+#16 small changes added through testing
+
+- make footer links work - yes
+
+- only display date not date & time in post list, post detail and comments - yes
+
+- message at top of post list page to tell non logged in user that they have to login to read the full post - yes
+
+- above message does not show for logged in users - yes
 
 ### Lighthouse
 

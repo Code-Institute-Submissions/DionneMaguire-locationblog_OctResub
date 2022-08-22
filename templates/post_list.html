@@ -4,6 +4,14 @@
 {% block content %} 
 
 <div class="container-fluid">
+    <div class="">
+        {% if user.is_authenticated %}
+        {% else %}
+            <p class="login-message">Please login to read full post
+                <a class="link" href="{% url 'account_login' %}">Login</a>.
+            </p>
+        {% endif %}
+    </div>
     <div class="row">
 
         <!--Blog Entries Column -->
