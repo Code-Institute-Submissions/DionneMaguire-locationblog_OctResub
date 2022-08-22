@@ -14,6 +14,9 @@ def index(request):
 
 
 class PostList(generic.ListView):
+    """
+    Displays post list of all posts with 6 to a page
+    """
     model = Post
     queryset = Post.objects.order_by('-created_on')
     template_name = 'post_list.html'
@@ -21,8 +24,14 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
+    """
+    Displays detail post
+    """
 
     def get(self, request, slug, *args, **kwargs):
+        """
+        Gets detailed post
+        """
         queryset = Post.objects
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.order_by("created_on")
@@ -42,6 +51,10 @@ class PostDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
+        """
+        Gets detailed postwith comments
+        User can submit comments
+        """
         queryset = Post.objects
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.order_by("created_on")
@@ -73,6 +86,9 @@ class PostDetail(View):
 
 
 class PostLike(View):
+    """
+    User can like or unlke posts
+    """
 
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
@@ -86,12 +102,18 @@ class PostLike(View):
 
 
 class PostCreate(CreateView):
+    """
+    Logged in user can create a post
+    """
     model = Post
     fields = ['title', 'location', 'content', 'featured_image', 'excerpt']
     template_name = 'post_create.html'
     success_url = reverse_lazy('post_list')
 
     def form_valid(self, form):
+        """
+        sets logged in user as author in form
+        """
         form.instance.author = self.request.user
         messages.success(
             self.request, 'You have successfully created a Location Post')
@@ -99,12 +121,18 @@ class PostCreate(CreateView):
 
 
 class PostEdit(UpdateView):
+    """
+    Loggged in user can edit their own posts
+    """
     model = Post
     fields = ['title', 'location', 'content', 'featured_image', 'excerpt']
     template_name = 'post_edit.html'
     success_url = reverse_lazy('post_list')
 
     def form_valid(self, form):
+        """
+        sets logged in user as author in form
+        """
         form.instance.author = self.request.user
         messages.success(
             self.request, 'You have successfully edited a Location post')
@@ -112,6 +140,9 @@ class PostEdit(UpdateView):
 
 
 class PostDelete(DeleteView):
+    """
+    Logged in user can delete their own posts
+    """
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('post_list')

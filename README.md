@@ -443,6 +443,10 @@ I copied my style.css file into the W3C CSS validation service.
 
 I copied and pasted my python files into the PEP8 validator
 
+for admin.py
+
+![admin.py](/documentation/validation/PEP8-admin-py.png)
+
 for models.py file
 
 ![models.py](/documentation/validation/PEP8-models-py.png)
