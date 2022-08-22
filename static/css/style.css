@@ -76,7 +76,7 @@ a.nav-link.active {
 
 .hero-text p {
     color: white;
-    font-size: 2em;
+    font-size: 1.75em;
     text-align: center;
 }
 
@@ -161,4 +161,10 @@ a.nav-link.active {
     border: none;
     background: transparent;
     padding: 0;
+}
+/* media query for less than 300px */
+@media screen and (max-width: 300px) {
+    .hero-text p {
+        font-size: 1.2em;
+    }
 }
