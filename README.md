@@ -204,7 +204,7 @@ The user is asked are they sure they want to logout and then they can click the 
 ### Home Page
 
 
-The home page consists of a hero image of a beautiful landscape, with the hero text of Location, Location, Location. Share your favourite places. Find new places. Underneath is a button to redirect to the posts page.
+The home page consists of a hero image of a beautiful landscape, with the hero text of Location, Location, Location. Share your favourite places. Find new places. Underneath is a button to redirect to the posts page. I changed the hero image to be a webp format to improve performance loading the page.
 
 ![hero image](/documentation/images/hero_image.png)
 
@@ -885,6 +885,7 @@ I search for my repo,
 Then scroll down and deploy branch.
 I watched the build to check it was successful and
 then opened the app.
+I have included a env.sample file which is a copy of my env.py file without the secret information.  This is to show what secret keys are required.
 
 When I had completed my testing in development, in the settings.py file I set DEBUG = False and added X_FRAME_OPTION = 'SAMEORIGIN'.
 I git add ., then git commit and git push.
@@ -934,7 +935,7 @@ By forking the GitHub Repository you will be able to make a copy of the original
 - I used bootstrap links from 'I think therefore I blog'.
 - I used 'I think therefore I blog' for the bases of my footer.
 - I used the stock picture from wallpapersafari.com.
-
+- I got the post pictures from - destimap.com, alany.com, istockphoto, coldwellbankercork.ie, discoverireland.ie, dreamtime.com, facebook.com, oceandivers.com, cork-guide.ie, eoceanic.com and mountainviews.ie
 
 
 ## Acknowledgements
