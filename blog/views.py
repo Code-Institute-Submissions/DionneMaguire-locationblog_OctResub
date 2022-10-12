@@ -3,7 +3,9 @@ from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
+
 from .models import Post
 from .forms import CommentForm
 
@@ -101,7 +103,7 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-class PostCreate(CreateView):
+class PostCreate(LoginRequiredMixin, CreateView):
     """
     Logged in user can create a post
     """
@@ -120,14 +122,24 @@ class PostCreate(CreateView):
         return super(PostCreate, self).form_valid(form)
 
 
-class PostEdit(UpdateView):
+class PostEdit(LoginRequiredMixin, UpdateView):
     """
-    Loggged in user can edit their own posts
+    Logged in user can edit their own posts
     """
     model = Post
     fields = ['title', 'location', 'content', 'featured_image', 'excerpt']
     template_name = 'post_edit.html'
     success_url = reverse_lazy('post_list')
+
+    def check_user(self):
+        """
+        Checks user is author
+        """
+        post = get_object_or_404(queryset, slug=slug)
+        if request.user != post.author:
+            messages.error(request, 'Sorry only the author of the post can edit')
+            return HttpResponseRedirect(reverse('post_list'))
+
 
     def form_valid(self, form):
         """
@@ -139,7 +151,7 @@ class PostEdit(UpdateView):
         return super(PostEdit, self).form_valid(form)
 
 
-class PostDelete(DeleteView):
+class PostDelete(LoginRequiredMixin, DeleteView):
     """
     Logged in user can delete their own posts
     """
@@ -147,6 +159,12 @@ class PostDelete(DeleteView):
     template_name = 'post_delete.html'
     success_url = reverse_lazy('post_list')
     success_message = "You have successfully deleted the post"
+
+    def user_check(self):
+        post = get_object_or_404(queryset, slug=slug)
+        if request.user != post.author:
+            messages.error(request, 'Sorry only the author of the post can delete')
+            return HttpResponseRedirect(reverse('post_list'))
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
