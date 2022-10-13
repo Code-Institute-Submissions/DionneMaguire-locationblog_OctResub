@@ -7,7 +7,7 @@ from .forms import UserProfileForm
 
 
 @login_required
-def edit_profile(request):
+def profile_edit(request):
     """
     Display the user's profile to edit
     """
