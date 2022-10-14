@@ -8,8 +8,7 @@ class UserProfileForm(forms.ModelForm):
     favourite_place = forms.CharField(
                                     label='Favourite Place:',
                                     required=False,
-                                    max_length=300,
-                                    widget=forms.Textarea)
+                                    max_length=300)
 
     class Meta:
         model = UserProfile
