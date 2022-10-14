@@ -7,7 +7,7 @@ from django.dispatch import receiver
 
 class UserProfile(models.Model):
     """
-    A user profile model 
+    A user profile model
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_image = CloudinaryField('image', default='placeholder')

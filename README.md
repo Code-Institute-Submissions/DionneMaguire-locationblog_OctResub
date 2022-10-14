@@ -52,6 +52,7 @@ I used Github Issues to record the following user stories:
 - Feedback messages - As a user I get messages back after I perform an action so that I know whether I have completed the action correctly.
 - Landing page - As a site user I can go to the landing page so that I can see the purpose of the website.
 - Highlight active page - as a site user I can see the active page highlighted so that I know what page I am on.
+- Profile - as a logged in user I can view and edit my profile so that I can keep it up to date.
 
 
 ### Agile Development Tool
@@ -148,7 +149,7 @@ The navbar is plain and simple so that it is very easy for the user to read.  Th
 
 ![Navbar for not signed in user](/documentation/images/navbar.png)
 
-If the user is signed in, then there is a Logout link visible.  Also if the user is signed in there is a message to say user name to act as an extra visual to the user that they are signed in! 
+If the user is signed in, then there is a Logout link visible.  Also if the user is signed in there is a message to say user name to act as an extra visual to the user that they are signed in! There is also a Profile link that the user can go in and view their profile.
 
 ![Navbar for signed in user](/documentation/images/navbar_signedin.png)
 
@@ -201,6 +202,20 @@ The user is asked are they sure they want to logout and then they can click the 
 ![message to say successfully signed out](/documentation/images/signedout.png)
 
 
+### Profile Page
+
+When the user has signed in they have an option on the navbar to click Profile link which brings them to their profile page.  I have put security mesures to make sure that the user is logged in and if not they are redirected to the login page.
+
+![Profile page](/documentation/images/profile_view.png)
+
+At the bottom of the profile page the user has the option of returning to the home page or to edit their profile.
+
+### Edit Profile Page
+
+The user has the option of changing their profile image and changing their favourite place. Again there is security to prevent non logged in users gaining access to this page.
+
+![Edit Profile page](/documentation/images/profile_edit.png)
+
 ### Home Page
 
 
@@ -213,7 +228,7 @@ Under the hero image, there is a short text to tell the user how this website wo
 ![home information](/documentation/images/home.png)
 
 If the user is not logged in they can only see the home page and the post list page. A signed in user can also see the post detail page, can like/unlike posts, can leave comments, can create their own post, can edit their own post and delete their own post.
-
+I have added security to prevent non logged in users trying to access these pages through typing the urls.
 
 ### Posts Page
 
@@ -251,6 +266,7 @@ I have amended the post to only show the date and not the date and time. I felt 
 This page can only be accessed by logged in users. I have added alt atributes for the images for accessibility.
 On mobile view the image is not displayed as it takes up too much room. There is a header banner which includes the title, location, author and date created.  Then under the banner is the content from the post.  Under the content there is a heart icon which acts as a button to allow the user to like or unlike the post.  If the heart is filled in red it means that this user has liked the post.  If the heart was just an outline in red it means this user has not liked this post.  There is logic in place that if a user has liked the post if they then click the heart again it will unlike the post. There is also a number beside the heart to show how many likes this post has. Also there is a comment icon again with a number to show how many comments.
 There is a back to posts button so the user can easily navigate back to the posts page.
+I have added security to prevent non logged in users accessing the view by typing the url.
 
 ![post detail](/documentation/images/title_detail.png)
 
@@ -287,6 +303,7 @@ After testing and getting feedback I have put in a brief explanation of the exce
 
 ![explanation of excerpt](/documentation/images/excerpt.png)
 
+I have added security to prevent non logged in users accessing this page by typing the url. If they are not logged in they will be redirected back to the login page.
 
 ### Edit Post
 
@@ -299,6 +316,7 @@ The user will be redirected to the posts page.  A message will appear just under
 
 ![message to say successfully editted post](/documentation/images/edit.png)
 
+I have added security to prevent non logged in users accessing this page and being able to edit an other persons post.  If a non logged in user tries to access the edit page they will get a forbidden message.
 
 ### Delete Post
 
@@ -311,6 +329,7 @@ Then if the user clicks delete, the post is deleted and the user is redirected b
 
 ![message to say successfully deleted post](/documentation/images/delete.png)
 
+I have added security to prevent non logged in users accessing this page by typing the url.  If they are not the author and not logged in they will get a forbidden message.
 
 ### Super user/admin
 
@@ -328,7 +347,7 @@ The design is kept simple to let the location posts take centre stage.  Also to 
 ### Data Model
 
 
-I needed two data models to make this website work.  The first data model is the Post. This contains the information for the post.  I have a second data model for the comments which are linked to a post.
+I needed two data models to make this website work.  The first data model is the Post. This contains the information for the post.  I have a second data model for the comments which are linked to a post. I have added a profile model, with some information about the user. The profile is created when the user registers.
 
 #### Location post model
 
@@ -353,6 +372,14 @@ I needed two data models to make this website work.  The first data model is the
 | | name | Char(80)
 | | body | TextField
 | | created_on | DateTime
+
+#### Profile model
+
+|Key | Name | Type
+|---------|----------------|-------------------|
+| 1 to 1 | User | User Model
+| | Image | Cloudinary_image
+| | Favourite_place | Textfield
 
 
 ### Typography
@@ -421,6 +448,14 @@ for signout page
 
 ![sign out page](/documentation/validation/html-validator-logout.png)
 
+for profile page
+
+![profile page](/documentation/validation/html-validator-profile.png)
+
+for profile edit page
+
+![profile edit page](/documentation/validation/html-validator-profileedit.png)
+
 for post page
 
 ![post page](/documentation/validation/html-validator-postlist.png)
@@ -455,35 +490,35 @@ I copied my style.css file into the W3C CSS validation service.
 
 I copied and pasted my python files into the PEP8 validator
 
-for admin.py
+for blog>admin.py
 
-![admin.py](/documentation/validation/PEP8-admin-py.png)
+![blog.admin.py](/documentation/validation/PEP8-admin-py.png)
 
-for models.py file
+for blog>models.py file
 
-![models.py](/documentation/validation/PEP8-models-py.png)
+![blog.models.py](/documentation/validation/PEP8-models-py.png)
 
-for forms.py file
+for blog>forms.py file
 
-![forms.py](/documentation/validation/PEP8-forms-py.png)
+![blog.forms.py](/documentation/validation/PEP8-forms-py.png)
 
-for urls.py file
+for blog>urls.py file
 
-![urls.py](/documentation/validation/PEP8-urls-py.png)
+![blog.urls.py](/documentation/validation/PEP8-urls-py.png)
 
-for views.py file
+for blog>views.py file
 
-![views.py](/documentation/validation/PEP8-views-py.png)
+![blog.views.py](/documentation/validation/PEP8-views-py.png)
 
 for codeloco>settings.py file
 
-![settings.py](/documentation/validation/PEP8-settings-py.png)
+![codeloco.settings.py](/documentation/validation/PEP8-settings-py.png)
 
 for codeloco>urls.py file
 
 ![codeloco.urls.py](/documentation/validation/PEP8-codeloco-urls-py.png)
 
-
+The online pep8 validator was unavailable when I was checking my profile files and the changes I had made to blog>views.py so I ran python3 -m flake8 and fixed errors that showed up. 
 
 ## Testing
 
@@ -583,6 +618,8 @@ Check that a non logged in user can not see the view button.
 ![can view detail](/documentation/testing/view_detail.png)
 
 Check that clicking the back to posts button takes the user back to the posts page - yes
+
+Check to make sure not logged in user cannot access the detail view if they are not logged in. they are redirected to login page - yes
 
 #6 view comments
 
@@ -685,6 +722,8 @@ Check that if no image was selected then the stock image is showing - yes
 
 Check if the user selects an image this image is showing - yes
 
+Check that not logged in user can access this page and they are redirected to login page - yes
+
 #11 edit post
 
 - as a logged in user I can edit my own post
@@ -704,6 +743,8 @@ The post should be visible on the posts page with the fields that were edited ch
 
 ![edit check](/documentation/testing/edit_check.png)
 
+If not logged in user tries to access this page via url they are redirected to the login page -yes
+
 #12 delete post
 
 - as a logged in user I can delete my own post.
@@ -721,6 +762,8 @@ The title of the post to be deleted is shown on the delete page - yes
 There is a go back button in case the user has made a mistake.  This should bring the user back to the posts page - yes
 
 If the user wants to delete this post they click delete. The user is redirected to the posts page and the post should not be shown - yes
+
+If a not logged in user tries to access the delete page via url they are redirected to login page - yes
 
 #13 feedback messages
 
@@ -760,6 +803,10 @@ When a user leaves a comment.
 
 ![comment message](/documentation/testing/comment_mess.png)
 
+When a user edits their profile
+
+![profile message](/documentation/testing/profile_message.png)
+
 #14 landing page
 
 - as a user I can see what the website is for from the landing page.
@@ -798,7 +845,24 @@ When on the logout page
 
 ![highlight logout](/documentation/testing/high_logout.png)
 
-#16 small changes added through testing
+#16 view and edit profile
+
+- as a user I can view and edit my profile
+
+Check that when a user logs in the profile link is visible on the navbar - yes
+
+Check on mobile view too - yes
+
+Check if not logged in user tries to access the profile page they get redirected to the login page - yes
+
+Check that the home button redirects correctly to the home page - yes
+
+Check that the edit profile button brings user to edit profile page - yes
+
+Check that edits to profile page are saved and can be viewed - yes
+
+
+#17 small changes added through testing
 
 - make footer links work - yes
 
@@ -860,18 +924,27 @@ Initial deployment:
 
 I followed the 'I think therefore I blog' walkthrough to create a basic django project.  I used the code institute template. 
 - I installed django and supporting libraries:
- I installed django, gunicorn, psycopg2, cloudinary.
-I created the requirements.txt file.
+I installed django, gunicorn, psycopg2, cloudinary with pip3 install django gunicorn dj_database_url psycopg2 dj-3-cloudinary-storage
+I created the requirements.txt file with pip3 freeze > requirements.txt
 
 - I created a new django project called 'codeloco' and a django app called 'blog'.
+django-admin startproject codeloco
+python3 manage.py startapp blog
 I need to add blog to installed apps in settings.py.
 After adding new app we need to migrate the changes to the database.
+python3 manage.py migrate
 
 - I set the project to use Cloudinary and PostgreSQL database.
 I created a heroku app called codeloco.
-I attached it to the database.
-I created an env.py file - this contains all the secret environmental variables. I need to reference this in settings.py file.
+I attached it to the database, in resource tab searched for postgres and attached. Then in config vars copy the text beside DATABASE_URL
+
+I created an env.py file - this contains all the secret environmental variables. I need to reference this in settings.py file. Added env.py to the .gitignore file.
+In the env.py file import os library.
+add os.environ["DATABASE_URL"] = copied string from heroku
+add os.environ["SECRET_KEY"] = make up randon key -add this secret key to heroku config vars
 I connected to cloudinary and tell django to use cloudinary to store media and static files.
+add os.environ["CLOUDINARY_URL"] = "cloudinary://<insert-your-url>" - add this to heroku config vars
+in heroku config vars add DISABLE_COLLECTSTATIC with value 1 - this has to be removed before final deployment
 I set up for static and media at the bottom of settings.py file.
 I needed to tell django where our templates will be stored.
 I needed to add heroku host name into allowed hosts in settings.py file.

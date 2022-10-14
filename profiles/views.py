@@ -29,6 +29,7 @@ def profile_edit(request):
 
     return render(request, template, context)
 
+
 @login_required
 def profile(request):
     """

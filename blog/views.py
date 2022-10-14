@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
@@ -50,7 +50,7 @@ class PostDetail(LoginRequiredMixin, View):
                 "liked": liked,
                 "comment_form": CommentForm()
             },
-        )
+            )
 
     def post(self, request, slug, *args, **kwargs):
         """
@@ -137,8 +137,6 @@ class PostEdit(UserPassesTestMixin, UpdateView):
         """
         obj = self.get_object()
         return obj.author == self.request.user
-        
-
 
     def form_valid(self, form):
         """
