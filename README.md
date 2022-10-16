@@ -743,7 +743,7 @@ The post should be visible on the posts page with the fields that were edited ch
 
 ![edit check](/documentation/testing/edit_check.png)
 
-If not logged in user tries to access this page via url they are redirected to the login page -yes
+If not logged in user tries to access this page via url they get 403 forbidden error - yes
 
 #12 delete post
 
@@ -763,7 +763,7 @@ There is a go back button in case the user has made a mistake.  This should brin
 
 If the user wants to delete this post they click delete. The user is redirected to the posts page and the post should not be shown - yes
 
-If a not logged in user tries to access the delete page via url they are redirected to login page - yes
+If a not logged in user tries to access the delete page via url they get 403 forbidden error - yes
 
 #13 feedback messages
 
